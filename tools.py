@@ -78,7 +78,7 @@ def show_grid_image(grid, len_row_values, len_col_values):
             elif grid[row][col] > 0:
                 draw.rectangle(((left, upper), (right, lower)), fill="white")
                 text = str(grid[row][col])
-                text_bbox = draw.textbbox((left, upper, right, lower), text)
+                text_bbox = draw.textbbox((left, upper), text)
                 text_width = text_bbox[2] - text_bbox[0]
                 text_height = text_bbox[3] - text_bbox[1]
                 text_position = ((left + right - text_width) // 2, (upper + lower - text_height) // 2)
